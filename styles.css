@@ -119,13 +119,14 @@ button:focus, button:active {
 
 @media screen and (max-width: 550px) {
   .clock {
-    font-size: 8rem;
+    /* font-size: 8rem; */
   }
 
 #qrcode {
     width:160px;
     height:160px;
-    margin-top:15px;
-    margin: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 }
