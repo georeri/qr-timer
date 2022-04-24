@@ -1,7 +1,6 @@
 {
   "name": "pomodoro",
   "version": "1.0.0",
-  "type": "module",
   "description": "A pomodoro timer application built with JavaScript",
   "main": "main.js",
   "scripts": {
