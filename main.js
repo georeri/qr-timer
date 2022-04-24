@@ -9,15 +9,18 @@ const timer = {
 let interval;
 
 const urlParams = new URLSearchParams(window.location.search);
-const endHour = Number.parseInt(urlParams.get('endHour'));
-const endMinute = Number.parseInt(urlParams.get('endMinute'));
+
 
 
 
 // Takes a timestamp and finds the diff between current time and end time in milliseconds
 function getRemainingTime(endTime) {
     const currentTime = Date.parse(new Date());
-    const difference = endTime - currentTime;
+    var difference = endTime - currentTime;
+    if(difference < 0)
+    {
+        difference += 24 * 60 * 60 * 1000;
+    }
 
     const total = Number.parseInt(difference / 1000, 10);
     const hours = Number.parseInt((total / 60 / 60), 10);
@@ -69,8 +72,19 @@ function updateClock() {
 function initalizeTimer() {
 
     var goalTime = new Date();
+    var hourParam = urlParams.get('endHour');
+    var endHour, endMinute;
+    if(hourParam != null && hourParam != "") {
+        endHour = Number.parseInt(urlParams.get('endHour'));
+        endMinute = Number.parseInt(urlParams.get('endMinute'));
+    }
+    else {
+        endHour = goalTime.getHours();
+        endMinute = goalTime.getMinutes() + 7;
+    }
     goalTime.setHours(endHour);
     goalTime.setMinutes(endMinute);
+   
     var remTime = getRemainingTime(goalTime);
     
     timer.remainingTime = remTime;

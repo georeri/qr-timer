@@ -60,7 +60,7 @@ progress::-webkit-progress-value {
 .clock {
   margin-top: 50px;
   margin-bottom: 30px;
-  font-size: 15rem;
+  font-size: 5rem;
   line-height: 1;
   display: flex;
   align-items: center;
@@ -126,5 +126,6 @@ button:focus, button:active {
     width:160px;
     height:160px;
     margin-top:15px;
+    margin: auto;
   }
 }
