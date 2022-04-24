@@ -1,6 +1,7 @@
 {
   "name": "pomodoro",
   "version": "1.0.0",
+  "type": "module",
   "description": "A pomodoro timer application built with JavaScript",
   "main": "main.js",
   "scripts": {
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/Freshman-tech/pomodoro#readme",
   "dependencies": {
-    "browser-sync": "^2.26.12"
+    "browser-sync": "^2.26.12",
+    "qrcodejs": "^1.0.0"
   }
 }

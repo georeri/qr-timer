@@ -12,7 +12,7 @@
       <progress id="js-progress" value="0"></progress>
       <div class="progress-bar"></div>
       <div class="timer">
-        <div class="button-group mode-buttons" id="js-mode-buttons">
+        <!-- <div class="button-group mode-buttons" id="js-mode-buttons">
           <button
             data-mode="pomodoro"
             class="button active mode-button"
@@ -34,15 +34,16 @@
           >
             Long break
           </button>
-        </div>
+        </div> -->
         <div class="clock" id="js-clock">
+          <span id="js-hours">0</span>
+          <span class="separator">:</span>
           <span id="js-minutes">25</span>
           <span class="separator">:</span>
           <span id="js-seconds">00</span>
         </div>
-        <button class="main-button" data-action="start" id="js-btn">
-          Start
-        </button>
+        <input id="js-url" type="text" value="timer url" style="width:80%" hidden="true"/><br />
+        <div id="qrcode" ></div>
       </div>
     </main>
     <div class="hidden">
@@ -50,6 +51,7 @@
       <audio src="break.mp3" data-sound="shortBreak"></audio>
       <audio src="break.mp3" data-sound="longBreak"></audio>
     </div>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

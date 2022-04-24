@@ -121,4 +121,10 @@ button:focus, button:active {
   .clock {
     font-size: 8rem;
   }
+
+#qrcode {
+    width:160px;
+    height:160px;
+    margin-top:15px;
+  }
 }
